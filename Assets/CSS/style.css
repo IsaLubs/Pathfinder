@@ -1,0 +1,252 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
+  -webkit-animation: AnimateBG 20s ease infinite;
+          animation: AnimateBG 20s ease infinite;
+}
+@-webkit-keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+#maze_view {
+    margin-top: 30px;
+}
+
+#imageSelectorContainer {
+    position: fixed;
+    display: none; 
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-height: 300px;
+    background-color: rgb(238, 115, 115);
+    border: 2px red #b18888;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#image-selector {
+    list-style-type: none;
+    max-width: auto;
+}
+
+#image-checkbox {
+    display: inline-block;
+}
+
+input[type="checkbox"][id^="checkbox"] {
+    display: none;
+}
+
+label {
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+label img {
+    height: 40px;
+    width: 40px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    transition-duration: 0.2s;
+}
+#saveBtn{
+    width: 80px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    right: 50%;
+    background-color:#B27726;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+}
+
+:checked + label:before {
+    transform: scale(2);
+}
+  
+:checked + label img {
+    transform: scale(0.9);
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0 0  0 2px rgb(255,255,255),
+                0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+
+#mazeContainer {
+    top: 15px;
+    opacity: 0;
+    display: inline-block;
+    margin: auto;
+    border-radius: 10px;
+}
+#mazeContainer #mazeCanvas {
+    margin: 0;
+    display: block;
+    border: solid 6px red;
+    height: 400px;
+}
+input, select {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.30);
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+}
+input:hover, select:hover {
+	background-color: rgba(0, 0, 0, 0.70);
+}
+input:active, select:active {
+	background-color: black;
+}
+input:focus, select:focus {
+	outline: none;
+}
+.custom-select {
+	display: inline-block;
+}
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 125px center;
+}
+#Message-Container,#Message-Container1 {
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+
+#message1{
+    background-color: rgb(228, 76, 76) !important;
+    border-radius: 10px;
+}
+#message{
+    background-color: rgb(141, 240, 128) !important;
+    border-radius: 10px;
+}
+#Message-Container #message, #Message-Container1 #message1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+#home_page {
+	text-align: center;
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+#home_page #stage-selector-menu {
+    margin: auto;
+    padding: 10px;
+    height: 65px;
+    box-sizing: border-box;
+}
+#home_page #stage-selector-menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
+#home_page #maze_view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+.border {
+    border: 10px gold solid;
+    border-radius: 10px;
+}
+
+#arrow-instruction {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+#StartInstruction{
+    font-size: 30px; 
+    height: 405px; 
+    display: flex; 
+    flex-direction: column;
+    text-align: center; 
+    justify-content: center; 
+    align-items: center;
+}
+#rulesBullet{
+    font-size: 20px;
+    text-align: start;
+}
+@media only screen and (max-width: 400px) {
+	input, select {
+	    width: 120px;
+	}
+}
