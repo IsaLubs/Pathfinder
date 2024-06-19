@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Path Finder</title>
+  <link rel="stylesheet" href=".\Assets\CSS\style.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <div id="home_page">
+    <div id="Message-Container">
+      <div id="message">
+        <h1>Congratulations!</h1>
+        <p>You are done.</p>
+        <p id="moves"></p>
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again!" />
+      </div>
+    </div>
+    <div id="winner-animation" class="content"></div>
+    <div id="Message-Container1">
+      <div id="message1">
+        <h1>Sorry !!</h1>
+        <p>You Loose.</p>
+        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container1')" value="Try Again!" />
+      </div>
+    </div>
+
+    <br>
+    <div id="stage-selector-menu">
+      <div id="selector-menu" class="custom-select">
+        <select id="difficulty-level-Select">
+                  <option value="0">Select Level</option>
+                  <option value="10">Easy</option>
+                  <option value="15">Medium</option>
+                  <option value="25">Hard</option>
+              </select>
+      </div>
+      <input id="mazeStartbtn" type="button" onclick="makeMaze()" value="Start" />
+    </div>
+    <div id="StartInstruction" > Rules for the game
+      <ol>
+        <li id="rulesBullet">Select Level before Start</li>
+        <li id="rulesBullet">Select the Avatar before start</li>
+        <li id="rulesBullet">Finish the path before time</li>
+      </ol>
+    </div>
+
+
+    <div id="maze_view">
+      <div id="mazeContainer">
+        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+      </div>
+    </div>
+      <p id="arrow-instruction">Use arrow <img src= ".\Assets\Images\arrow2.png" alt="" style="width: 60px;">  keys to move the mpuse to the hole!</p>
+      <div style="height: 30px;" id="timer">Time left: <span id="time">00:00</span></div>
+
+  </div>
+  <div id="imageSelectorContainer">
+    <ul  id="image-selector">
+      <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox1" />
+        <label for="checkbox1"><img src=".\\Assets\\Images\\mouse.png" />
+        </label>
+      </li>
+          <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox2" />
+        <label for="checkbox2"><img src=".\\Assets\\Images\\run.png" />
+        </label>
+      </li>
+        <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox3" />
+        <label for="checkbox3"><img src=".\\Assets\\Images\\lion.png" />
+        </label>
+      </li>
+        <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox4" />
+        <label for="checkbox4"><img src=".\\Assets\\Images\\sedan.png" />
+        </label>
+      </li>
+    </ul>
+    <button id="saveBtn">Save</button>
+  </div>
+  <audio id="tickerSound" src=".\Assets\Audio\countdown-from-10-105775.mp3"></audio>
+  <audio id="tickerSound1" src=".\Assets\Audio\one-second-tick (mp3cut.net).mp3"></audio>
+  <audio id="tickerSound2" src=".\Assets\Audio\mixkit-falling-game-over-1942.wav"></audio>
+  <audio id="tickerSound3" src=".\Assets\Audio\mixkit-ethereal-fairy-win-sound-2019.wav"></audio>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  
+  <script src=".\Assets\Js\script.js"></script>
+</body>
+</html>
