@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Path Finder</title>
   <link rel="stylesheet" href=".\Assets\CSS\style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,7 +42,7 @@
                   <option value="25">Hard</option>
               </select>
       </div>
-      <input id="mazeStartbtn" type="button" onclick="makeMaze()" value="Start" />
+      <input id="Startbtn" type="button" onclick="makePath()" value="Start" />
       
     </div>
     <div id="StartInstruction" > Rules for the game
@@ -53,19 +54,19 @@
     </div>
 
 
-    <div id="maze_view">
-      <div id="mazeContainer">
-        <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+    <div id="path_view">
+      <div id="pathContainer">
+        <canvas id="pathCanvas" class="border" height="1100" width="1100"></canvas>
       </div>
       <div class="button-row">
         <div id="upperBtn">
-          <button id="upBtn"><i class="fa fa-arrow-up"></i></button>
+          <a id="upBtn"><i class="fa fa-arrow-up"></i></a>
 
         </div>
         <div id="lowerBtn">
-          <button id="leftBtn"><i class="fa fa-arrow-left"></i></button>
-          <button id="downBtn"><i class="fa fa-arrow-down"></i></button>
-          <button id="rightBtn"><i class="fa fa-arrow-right"></i></button>
+          <a class="left_btn" id="leftBtn"><i class="fa fa-arrow-left"></i></a>
+          <a id="downBtn"><i class="fa fa-arrow-down"></i></a>
+          <a id="rightBtn"><i class="fa fa-arrow-right"></i></a>
         </div>
         
       </div>
@@ -100,7 +101,7 @@
   </div>
  
   <audio id="tickerSound" src=".\Assets\Audio\countdown-from-10-105775.mp3"></audio>
-  <audio id="tickerSound1" src=".\Assets\Audio\one-second-tick (mp3cut.net).mp3"></audio>
+  <audio id="tickerSound1" src=".\Assets\Audio\742252__bilicho__vibes-120bpm.wav"></audio>
   <audio id="tickerSound2" src=".\Assets\Audio\mixkit-falling-game-over-1942.wav"></audio>
   <audio id="tickerSound3" src=".\Assets\Audio\mixkit-ethereal-fairy-win-sound-2019.wav"></audio>
 
