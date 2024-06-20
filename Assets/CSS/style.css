@@ -39,6 +39,30 @@ html, body {
 #maze_view {
     margin-top: 30px;
 }
+.button-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.button-row button{
+    width: 60px; 
+    max-width: 60px; 
+    border-radius: 10px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: gold;
+    color: white;
+}
+
+.button-row button:hover{
+    border: 1px solid;
+    border-color: red;
+}
+
 
 #imageSelectorContainer {
     position: fixed;
@@ -121,7 +145,7 @@ label img {
     margin: 0;
     display: block;
     border: solid 6px red;
-    height: 400px;
+    height: 300px;
 }
 input, select {
     cursor: pointer;
@@ -213,7 +237,7 @@ input:focus, select:focus {
 }
 #home_page #maze_view {
     position: absolute;
-    top: 65px;
+    top: 85px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -227,6 +251,7 @@ input:focus, select:focus {
 
 #arrow-instruction {
     margin-top: 20px;
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,4 +274,14 @@ input:focus, select:focus {
 	input, select {
 	    width: 120px;
 	}
+    #mazeCanvas {
+        width: 300px !important;
+        height: 300px !important;
+      }
+    #imageSelectorContainer{
+        max-width: 300px;
+    }
+   
+    
 }
+
