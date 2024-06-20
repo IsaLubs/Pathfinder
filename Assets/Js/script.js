@@ -347,7 +347,20 @@ function Player(maze, c, _cellsize, onComplete, sprite = null) {
       coord.x * cellSize + offsetLeft, coord.y * cellSize + offsetLeft, cellSize - offsetRight, cellSize - offsetRight
     );
   }
+  
 
+  document.getElementById('upBtn').addEventListener('click', () => {
+    check({ keyCode: 38 }); 
+  });
+  document.getElementById('downBtn').addEventListener('click', () => {
+    check({ keyCode: 40 }); 
+  });
+  document.getElementById('leftBtn').addEventListener('click', () => {
+    check({ keyCode: 37 });
+  });
+  document.getElementById('rightBtn').addEventListener('click', () => {
+    check({ keyCode: 39 }); 
+  });
   function check(e) {
     var cell = map[cellCoords.x][cellCoords.y];
     moves++;
@@ -394,6 +407,8 @@ function Player(maze, c, _cellsize, onComplete, sprite = null) {
         break;
     }
   }
+  
+  
 
   this.bindKeyDown = function() {
     window.addEventListener("keydown", check, false);
@@ -533,6 +548,10 @@ function makeMaze() {
   }
   
   var instructionElement = document.getElementById('arrow-instruction');
+  var maze_canvas = document.getElementById('mazeCanvas');
+  var arrow_intruction = document.getElementById('arrow-instruction');
+  maze_canvas.style.height = '400px'
+  arrow_intruction.style.paddingTop = '100px';
   instructionElement.style.marginTop = '425' + 'px'; 
   var startinstructionElement = document.getElementById('StartInstruction');
   startinstructionElement.style.display = 'none'; 
@@ -552,6 +571,7 @@ function makeMaze() {
     document.getElementById("mazeContainer").style.opacity = "100";
   }
 }
+
 function imageSelector() {
   var imageSelectorContainer = document.getElementById("imageSelectorContainer");
   imageSelectorContainer.style.opacity = '1';
@@ -831,4 +851,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
   });
 });
+const arrowInstruction = document.getElementById('arrow-instruction');
 
+window.addEventListener('resize', () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 400) {
+        arrowInstruction.style.paddingTop = '40px';
+    } else {
+        arrowInstruction.style.paddingTop = '80px';
+    }
+});
+if (window.innerWidth < 400) {
+    arrowInstruction.style.paddingTop = '40px';
+}
