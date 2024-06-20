@@ -274,10 +274,13 @@ input:focus, select:focus {
 	}
     #pathCanvas {
         width: 300px !important; 
-        height: 300px !important; 
+        height: 300px !important;
       }
     #imageSelectorContainer{
         max-width: 300px;
+    }
+    #arrow-instruction{
+        padding-top: 40px;
     }
    
     
