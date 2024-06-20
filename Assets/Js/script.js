@@ -552,7 +552,7 @@ function makePath() {
   var path_canvas = document.getElementById('pathCanvas');
   var arrow_intruction = document.getElementById('arrow-instruction');
   path_canvas.style.height = '400px'
-  arrow_intruction.style.paddingTop = '100px';
+  arrow_intruction.style.paddingTop = '80px';
   instructionElement.style.marginTop = '425' + 'px'; 
   var startinstructionElement = document.getElementById('StartInstruction');
   startinstructionElement.style.display = 'none'; 
@@ -857,13 +857,13 @@ const arrowInstruction = document.getElementById('arrow-instruction');
 window.addEventListener('resize', () => {
     const screenWidth = window.innerWidth;
     if (screenWidth < 400) {
-        arrowInstruction.style.paddingTop = '40px';
+        arrowInstruction.style.paddingTop = '20px';
     } else {
         arrowInstruction.style.paddingTop = '80px';
     }
 });
 if (window.innerWidth < 400) {
-    arrowInstruction.style.paddingTop = '40px';
+    arrowInstruction.style.paddingTop = '20px';
 }
 
 
