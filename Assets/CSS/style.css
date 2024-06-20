@@ -275,8 +275,8 @@ input:focus, select:focus {
 	    width: 120px;
 	}
     #mazeCanvas {
-        width: 300px !important;
-        height: 300px !important;
+        width: 300px !important; /* Mobile width */
+        height: 300px !important; /* Mobile height */
       }
     #imageSelectorContainer{
         max-width: 300px;
