@@ -552,7 +552,7 @@ function makePath() {
   var path_canvas = document.getElementById('pathCanvas');
   var arrow_intruction = document.getElementById('arrow-instruction');
   path_canvas.style.height = '400px'
-  arrow_intruction.style.paddingTop = '80px';
+  arrow_intruction.style.paddingTop = '40px';
   instructionElement.style.marginTop = '425' + 'px'; 
   var startinstructionElement = document.getElementById('StartInstruction');
   startinstructionElement.style.display = 'none'; 
