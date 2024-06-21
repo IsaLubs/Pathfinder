@@ -1,3 +1,4 @@
+/* Set HTML and body to cover full viewport and animate background gradient */
 html, body {
     width: 100vw;
     height: 100vh;
@@ -10,35 +11,41 @@ html, body {
     right: 0;
     font-family: 'Poppins', sans-serif;
     background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
-  -webkit-animation: AnimateBG 20s ease infinite;
-          animation: AnimateBG 20s ease infinite;
+    -webkit-animation: AnimateBG 20s ease infinite;
+    animation: AnimateBG 20s ease infinite;
 }
+
+/* Define keyframes for background animation */
 @-webkit-keyframes AnimateBG {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
-  
-  @keyframes AnimateBG {
+}
+
+@keyframes AnimateBG {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}
+
+/* Style for the path view */
 #path_view {
     margin-top: 30px;
 }
+
+/* Style for button rows with centered alignment */
 .button-row {
     display: flex;
     justify-content: center;
@@ -48,7 +55,8 @@ html, body {
     margin-bottom: 10px;
 }
 
-.button-row a{
+/* Style for buttons */
+.button-row a {
     text-decoration: none;
     min-width: 60px !important; 
     height: 40px;
@@ -62,6 +70,7 @@ html, body {
     color: white;
 }
 
+/* Style for the image selector container */
 #imageSelectorContainer {
     position: fixed;
     display: none; 
@@ -71,7 +80,7 @@ html, body {
     width: 400px;
     max-height: 300px;
     background-color: rgb(238, 115, 115);
-    border: 2px red #b18888;
+    border: 2px solid #b18888;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
@@ -79,19 +88,23 @@ html, body {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+/* Style for the image selector list */
 #image-selector {
     list-style-type: none;
     max-width: auto;
 }
 
+/* Inline-block style for image checkboxes */
 #image-checkbox {
     display: inline-block;
 }
 
+/* Hide checkboxes visually */
 input[type="checkbox"][id^="checkbox"] {
     display: none;
 }
 
+/* Style for labels */
 label {
     padding: 10px;
     display: block;
@@ -100,6 +113,7 @@ label {
     cursor: pointer;
 }
 
+/* Style for images inside labels */
 label img {
     height: 40px;
     width: 40px;
@@ -107,31 +121,34 @@ label img {
     border-radius: 10px;
     transition-duration: 0.2s;
 }
-#saveBtn{
+
+/* Style for the save button */
+#saveBtn {
     width: 80px;
     height: 40px;
     margin-bottom: 10px;
     margin-left: 40%;
     right: 50%;
-    background-color:#B27726;
+    background-color: #B27726;
     font-size: 20px;
     color: white;
     border-radius: 10px;
     border: none;
 }
 
+/* Style for checked labels */
 :checked + label:before {
     transform: scale(2);
 }
-  
+
 :checked + label img {
     transform: scale(0.9);
-    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
-                0 0  0 2px rgb(255,255,255),
-                0.3em 0.3em 1em rgba(0,0,0,0.3);
-
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+                0 0  0 2px rgb(255, 255, 255),
+                0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+/* Style for path container */
 #pathContainer {
     top: 15px;
     opacity: 0;
@@ -139,12 +156,16 @@ label img {
     margin: auto;
     border-radius: 10px;
 }
+
+/* Style for path canvas */
 #pathContainer #pathCanvas {
     margin: 0;
     display: block;
     border: solid 6px red;
     height: 300px;
 }
+
+/* Style for input and select elements */
 input, select {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.30);
@@ -160,18 +181,28 @@ input, select {
     text-decoration: none;
     appearance: none;
 }
+
+/* Hover effect for input and select elements */
 input:hover, select:hover {
-	background-color: rgba(0, 0, 0, 0.70);
+    background-color: rgba(0, 0, 0, 0.70);
 }
+
+/* Active effect for input and select elements */
 input:active, select:active {
-	background-color: black;
+    background-color: black;
 }
+
+/* Focus effect for input and select elements */
 input:focus, select:focus {
-	outline: none;
+    outline: none;
 }
+
+/* Custom select element */
 .custom-select {
-	display: inline-block;
+    display: inline-block;
 }
+
+/* Remove default appearance for custom select */
 .custom-select select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -179,7 +210,9 @@ input:focus, select:focus {
     background-repeat: no-repeat;
     background-position: 125px center;
 }
-#Message-Container,#Message-Container1 {
+
+/* Message container styles */
+#Message-Container, #Message-Container1 {
     visibility: hidden;
     color: white;
     display: block;
@@ -194,15 +227,19 @@ input:focus, select:focus {
     z-index: 1;
 }
 
-#message1{
+/* Styles for specific messages */
+#message1 {
     background-color: rgb(228, 76, 76) !important;
     border-radius: 10px;
 }
-#message{
+
+#message {
     background-color: rgb(141, 240, 128) !important;
     border-radius: 10px;
 }
-#Message-Container #message, #Message-Container1 #message1{
+
+/* Centered message content */
+#Message-Container #message, #Message-Container1 #message1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,24 +252,32 @@ input:focus, select:focus {
     margin-left: -150px;
     margin-top: -150px;
 }
+
+/* Home page styles */
 #home_page {
-	text-align: center;
-	height: auto;
-	width: auto;
-	margin: auto;
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: auto;
 }
+
+/* Stage selector menu styles */
 #home_page #stage-selector-menu {
     margin: auto;
     padding: 10px;
     height: 65px;
     box-sizing: border-box;
 }
+
+/* Stage selector menu heading styles */
 #home_page #stage-selector-menu h1 {
     margin: 0;
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 3.2rem;
 }
+
+/* Path view positioning */
 #home_page #path_view {
     position: absolute;
     top: 85px;
@@ -242,11 +287,14 @@ input:focus, select:focus {
     width: 100%;
     height: auto;
 }
+
+/* Border style */
 .border {
     border: 10px gold solid;
     border-radius: 10px;
 }
 
+/* Arrow instruction styles */
 #arrow-instruction {
     margin-top: 20px;
     padding-top: 20px;
@@ -254,8 +302,9 @@ input:focus, select:focus {
     align-items: center;
     justify-content: center;
 }
- 
-#StartInstruction{
+
+/* Start instruction styles */
+#StartInstruction {
     font-size: 30px; 
     height: 405px; 
     display: flex; 
@@ -264,25 +313,26 @@ input:focus, select:focus {
     justify-content: center; 
     align-items: center;
 }
-#rulesBullet{
+
+/* Rules bullet styles */
+#rulesBullet {
     font-size: 20px;
     text-align: start;
 }
+
+/* Responsive styles for small screens */
 @media only screen and (max-width: 400px) {
-	input, select {
-	    width: 120px;
-	}
+    input, select {
+        width: 120px;
+    }
     #pathCanvas {
         width: 300px !important; 
         height: 300px !important;
-      }
-    #imageSelectorContainer{
+    }
+    #imageSelectorContainer {
         max-width: 300px;
     }
-    #arrow-instruction{
+    #arrow-instruction {
         padding-top: 40px;
     }
-   
-    
 }
-
