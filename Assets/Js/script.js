@@ -1,8 +1,11 @@
-var selectedImageSrc = ""; 
+var selectedImageSrc = ""; // variable ensure the selected avatar src
 
+// Function to generate a random number between 0 and max
 function rand(max) {
     return Math.floor(Math.random() * max);
   }
+// Function to shuffle an array
+
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -10,7 +13,7 @@ function shuffle(a) {
   }
   return a;
 }
-
+// Function to change the brightness of an image
 function changeBrightness(factor, sprite) {
   var virtCanvas = document.createElement("canvas");
   virtCanvas.width = 500;
@@ -29,6 +32,7 @@ function changeBrightness(factor, sprite) {
   virtCanvas.remove();
   return spriteOutput;
 }
+// Function to display victory message
 function displayVictoryMess(moves) {
   var endTime = Date.now(); 
   var timeTaken = (endTime - startTime) / 1000; 
@@ -40,6 +44,8 @@ function displayVictoryMess(moves) {
   winnerAnimation()
 
 }
+// Function to toggle the visibility of an element
+
 function toggleVisablity(id) {
   if (document.getElementById(id).style.visibility == "visible") {
     location.reload(true);
@@ -49,6 +55,7 @@ function toggleVisablity(id) {
     document.getElementById(id).style.visibility = "visible";
   }
 }
+// Path generation constructor function
 
 function path(Width, Height) {
   var pathMap;
@@ -79,6 +86,7 @@ function path(Width, Height) {
   this.endCoord = function() {
     return endCoord;
   };
+  // Function to generate the map
   function genMap() {
     pathMap = new Array(height);
     for (y = 0; y < height; y++) {
@@ -90,7 +98,7 @@ function path(Width, Height) {
       }
     }
   }
-
+  // Function to define the path
   function definepath() {
     var isComp = false;
     var move = false;
@@ -138,7 +146,7 @@ function path(Width, Height) {
       }
     }
   }
-
+  // Function to define the start and end coordinates
   function defineStartEnd() {
     switch (rand(4)) {
       case 0:
@@ -179,21 +187,21 @@ function path(Width, Height) {
   defineStartEnd();
   definepath();
 }
-
+// Function to draw path on map
 function Drawpath(path, ctx, cellsize, endSprite = null) {
   var map = path.map();
   var cellSize = cellsize;
   var drawEndMethod;
   ctx.lineWidth = cellSize / 20;
   ctx.strokeStyle = 'purple'; 
-
+  // Method to redraw the path with a new cell size
   this.redrawpath = function(size) {
     cellSize = size;
     ctx.lineWidth = cellSize / 30;
     drawMap();
     drawEndMethod();
   }; 
-    
+  // Function to draw a cell based on its walls
   function drawCell(xCord, yCord, cell) {
     var x = xCord * cellSize;
     var y = yCord * cellSize;
@@ -223,7 +231,7 @@ function Drawpath(path, ctx, cellsize, endSprite = null) {
       ctx.stroke();
     }
   }
-    
+  // Function to draw the entire map 
   function drawMap() {
     for (x = 0; x < map.length; x++) {
       for (y = 0; y < map[x].length; y++) {
@@ -231,7 +239,7 @@ function Drawpath(path, ctx, cellsize, endSprite = null) {
       }
     }
   }
-    
+  // Function to draw the end flag (checkerboard pattern)
   function drawEndFlag() {
     var coord = path.endCoord();
     var gridSize = 4;
@@ -259,6 +267,7 @@ function Drawpath(path, ctx, cellsize, endSprite = null) {
       }
     }
   }
+  // Function to draw the end sprite
   function drawEndSprite() {
     var offsetLeft = cellSize / 50;
     var offsetRight = cellSize / 25;
@@ -275,6 +284,7 @@ function Drawpath(path, ctx, cellsize, endSprite = null) {
       cellSize - offsetRight
     );
   }
+  // Function to clear the canvas
   function clear() {
     var canvasSize = cellSize * map.length;
     ctx.clearRect(0, 0, canvasSize, canvasSize);
@@ -288,7 +298,7 @@ function Drawpath(path, ctx, cellsize, endSprite = null) {
   drawMap();
   drawEndMethod();
 }
-  
+// Function control player movement
 function Player(path, c, _cellsize, onComplete, sprite = null) {
   var ctx = c.getContext("2d");
   var drawSprite;
@@ -310,7 +320,7 @@ function Player(path, c, _cellsize, onComplete, sprite = null) {
     cellSize = _cellsize;
     drawSpriteImg(cellCoords);
   };
-
+  // Function to draw the player as a yellow circle
   function drawSpriteCircle(coord) {
     ctx.beginPath();
     ctx.fillStyle = "yellow";
@@ -327,7 +337,7 @@ function Player(path, c, _cellsize, onComplete, sprite = null) {
       player.unbindKeyDown();
     }
   }
-
+  // Function to draw the player as an image
   function drawSpriteImg(coord) {
     var offsetLeft = cellSize / 50;
     var offsetRight = cellSize / 25;
@@ -339,7 +349,7 @@ function Player(path, c, _cellsize, onComplete, sprite = null) {
       player.unbindKeyDown();
     }
   }
-
+  // Function to remove the player sprite from the current position
   function removeSprite(coord) {
     var offsetLeft = cellSize / 50;
     var offsetRight = cellSize / 25;
@@ -347,8 +357,7 @@ function Player(path, c, _cellsize, onComplete, sprite = null) {
       coord.x * cellSize + offsetLeft, coord.y * cellSize + offsetLeft, cellSize - offsetRight, cellSize - offsetRight
     );
   }
-  
-
+  // Controller button movement 
   document.getElementById('upBtn').addEventListener('click', () => {
     check({ keyCode: 38 }); 
   });
@@ -361,7 +370,7 @@ function Player(path, c, _cellsize, onComplete, sprite = null) {
   document.getElementById('rightBtn').addEventListener('click', () => {
     check({ keyCode: 39 }); 
   });
-  
+  // Function to handle key press events for player movement
   function check(e) {
     var cell = map[cellCoords.x][cellCoords.y];
     moves++;
@@ -408,8 +417,7 @@ function Player(path, c, _cellsize, onComplete, sprite = null) {
         break;
     }
   }
-  
-  
+  // Function to bind keydown events and swipe gestures
 
   this.bindKeyDown = function() {
     window.addEventListener("keydown", check, false);
@@ -464,6 +472,7 @@ var path, draw, player;
 var cellSize;
 var difficulty;
 
+// Function to initialize the game on window load
 window.onload = function() {
   let viewWidth = $("#path_view").width();
   let viewHeight = $("#path_view").height();
@@ -510,7 +519,7 @@ window.onload = function() {
   };
   
 };
-  
+// Function to adjust the canvas size on window resize
 window.onresize = function() {
   let viewWidth = $("#path_view").width();
   let viewHeight = $("#path_view").height();
@@ -528,6 +537,7 @@ window.onresize = function() {
   }
 };
 var isImageSelected = false;
+
 function makePath() {
   if (player != undefined) {
     player.unbindKeyDown();
@@ -584,7 +594,7 @@ if (window.innerWidth < 400) {
     document.getElementById("pathContainer").style.opacity = "100";
   }
 }
-
+// Avatar selector function
 function imageSelector() {
   var imageSelectorContainer = document.getElementById("imageSelectorContainer");
   imageSelectorContainer.style.opacity = '1';
@@ -649,7 +659,7 @@ function imageSelector() {
     }
   });
 }
-  
+// Function to reset the game
 function resetGame() {
   var instructionElement = document.getElementById('arrow-instruction');
   instructionElement.style.marginTop = '20' + 'px'; 
@@ -660,7 +670,8 @@ function resetGame() {
 var startTime; 
 var timerId;
 var countdownId;
-  
+// Function to control timer in the game
+
 function startTimer(difficulty) {
   startTime = Date.now(); 
   var timeLimit;
@@ -701,7 +712,7 @@ function startTimer(difficulty) {
     }
   }, 1000);
 }
-
+// Function to update timer in the game
 function updateTimer(seconds) {
   var minutes = Math.floor(seconds / 60);
   var remainingSeconds = seconds % 60;
@@ -712,7 +723,7 @@ function updateTimer(seconds) {
 
   document.getElementById('time').textContent = minutes + ":" + remainingSeconds;
 }
-
+// Function to display loer notification
 function displayLoserNotification() {
 
   clearInterval(countdownId); 
@@ -723,6 +734,7 @@ function displayLoserNotification() {
 
 
 }
+// Function to show winner brust animation when user won the game
 function winnerAnimation(){
   document.getElementById('tickerSound1').pause();
 
@@ -850,6 +862,7 @@ function winnerAnimation(){
   }();
 confetti.start();
 }
+// Ensure only one avatar got selected at a time
 document.addEventListener('DOMContentLoaded', (event) => {
   const checkboxes = document.querySelectorAll('.checkboxstyle');
 
