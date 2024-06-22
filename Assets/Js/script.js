@@ -34,6 +34,8 @@ function changeBrightness(factor, sprite) {
 }
 // Function to display victory message
 function displayVictoryMess(moves) {
+  document.getElementById('tickerSound').pause();
+  document.getElementById('tickerSound1').pause();
   var endTime = Date.now(); 
   var timeTaken = (endTime - startTime) / 1000; 
   clearInterval(countdownId); 
@@ -725,7 +727,8 @@ function updateTimer(seconds) {
 }
 // Function to display loer notification
 function displayLoserNotification() {
-
+  document.getElementById('tickerSound').pause();
+  document.getElementById('tickerSound1').pause();
   clearInterval(countdownId); 
   clearTimeout(timerId);
 
