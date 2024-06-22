@@ -60,7 +60,7 @@ html, body {
 
 #image-selector {
     list-style-type: none;
-    max-width: auto;
+    max-width: 60px;
 }
 
 #image-checkbox, #image-checkbox1, #image-checkbox2, #image-checkbox3 {
