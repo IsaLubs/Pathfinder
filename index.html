@@ -21,7 +21,7 @@
         <h1>Congratulations!</h1>
         <p>You are done.</p>
         <p id="moves"></p>
-        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again!" />
+        <input id="okBtnonwin" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again!" >
       </div>
     </div>
     <!-- winner brust animation div -->
@@ -31,7 +31,7 @@
       <div id="message1">
         <h1>Sorry !!</h1>
         <p>You Loose.</p>
-        <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container1')" value="Try Again!" />
+        <input id="okBtnosloose" type="button" onclick="toggleVisablity('Message-Container1')" value="Try Again!" >
       </div>
     </div>
 
@@ -47,14 +47,14 @@
               </select>
       </div>
       <!-- game start button to run the game -->
-      <input id="Startbtn" type="button" onclick="makePath()" value="Start" />
+      <input id="Startbtn" type="button" onclick="makePath()" value="Start" >
     </div>
     <!-- game rules div which define games rules in the start -->
     <div id="StartInstruction" > Rules for the game
       <ol>
         <li id="rulesBullet">Select Level before Start</li>
-        <li id="rulesBullet">Select the Avatar before start</li>
-        <li id="rulesBullet">Finish the path before time</li>
+        <li id="rulesBullet1">Select the Avatar before start</li>
+        <li id="rulesBullet2">Finish the path before time</li>
       </ol>
     </div>
     <!-- pathview game div which show game randomly generated canvas -->
@@ -87,20 +87,20 @@
   -->
   <div id="imageSelectorContainer">
     <ul  id="image-selector">
-      <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox1" />
-        <label for="checkbox1"><img src=".\\Assets\\Images\\mouse.png" />
+      <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox1" >
+        <label for="checkbox1"><img src=".\\Assets\\Images\\mouse.png" alt="mouse.png" >
         </label>
       </li>
-          <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox2" />
-        <label for="checkbox2"><img src=".\\Assets\\Images\\run.png" />
+          <li id="image-checkbox1"><input type="checkbox" class="checkboxstyle" id="checkbox2" >
+        <label for="checkbox2"><img src=".\\Assets\\Images\\run.png" alt="run.png" >
         </label>
       </li>
-        <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox3" />
-        <label for="checkbox3"><img src=".\\Assets\\Images\\lion.png" />
+        <li id="image-checkbox2"><input type="checkbox" class="checkboxstyle" id="checkbox3" >
+        <label for="checkbox3"><img src=".\\Assets\\Images\\lion.png" alt="lion.png" >
         </label>
       </li>
-        <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox4" />
-        <label for="checkbox4"><img src=".\\Assets\\Images\\sedan.png" />
+        <li id="image-checkbox3"><input type="checkbox" class="checkboxstyle" id="checkbox4" >
+        <label for="checkbox4"><img src=".\\Assets\\Images\\sedan.png" alt="sedan.png" >
         </label>
       </li>
     </ul>
@@ -116,8 +116,8 @@
   <!-- 4: game win sound -->
   <audio id="tickerSound3" src=".\Assets\Audio\mixkit-ethereal-fairy-win-sound-2019.wav"></audio>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
   <!-- javascript file use to controll the whole game setup -->
   <script src=".\Assets\Js\script.js"></script>
  
