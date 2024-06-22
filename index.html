@@ -13,8 +13,9 @@
 </head>
 
 <body>
-  
+  <!-- Main div -->
   <div id="home_page">
+    <!-- Winner div block show number of move and time taken while game play -->
     <div id="Message-Container">
       <div id="message">
         <h1>Congratulations!</h1>
@@ -23,7 +24,9 @@
         <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again!" />
       </div>
     </div>
+    <!-- winner brust animation div -->
     <div id="winner-animation" class="content"></div>
+    <!-- game loose div to let user reload the game again -->
     <div id="Message-Container1">
       <div id="message1">
         <h1>Sorry !!</h1>
@@ -33,6 +36,7 @@
     </div>
 
     <br>
+    <!-- drop down menu div to select game difficulty level -->
     <div id="stage-selector-menu">
       <div id="selector-menu" class="custom-select">
         <select id="difficulty-level-Select">
@@ -42,9 +46,10 @@
                   <option value="25">Hard</option>
               </select>
       </div>
+      <!-- game start button to run the game -->
       <input id="Startbtn" type="button" onclick="makePath()" value="Start" />
-      
     </div>
+    <!-- game rules div which define games rules in the start -->
     <div id="StartInstruction" > Rules for the game
       <ol>
         <li id="rulesBullet">Select Level before Start</li>
@@ -52,12 +57,13 @@
         <li id="rulesBullet">Finish the path before time</li>
       </ol>
     </div>
-
-
-    <div id="path_view">
+    <!-- pathview game div which show game randomly generated canvas -->
+    <div id="path_view"> 
+      <!-- game block div which show path -->
       <div id="pathContainer">
         <canvas id="pathCanvas" class="border" height="1100" width="1100"></canvas>
       </div>
+      <!-- controller button which let user control player movement with those button -->
       <div class="button-row">
         <div id="upperBtn">
           <a id="upBtn"><i class="fa fa-arrow-up"></i></a>
@@ -68,16 +74,17 @@
           <a id="downBtn"><i class="fa fa-arrow-down"></i></a>
           <a id="rightBtn"><i class="fa fa-arrow-right"></i></a>
         </div>
-        
       </div>
     </div>
-    
-      <p id="arrow-instruction">Use button or arrow <img src=".\Assets\Images/arrow2.png" alt="" style="width: 60px;">  keys to move the mpuse to the hole!</p>
-     
-      <div style="height: 30px;" id="timer">Time left: <span id="time">00:00</span></div>
+    <!-- instruction for controller use -->
+    <p id="arrow-instruction">Use button or arrow <img src=".\Assets\Images/arrow2.png" alt="" style="width: 60px;">  keys to move the mpuse to the hole!</p>
+     <!-- timer div to show count down timer in game -->
+    <div style="height: 30px;" id="timer">Time left: <span id="time">00:00</span></div>
 
   </div>
-  
+  <!--  Avatar Selector
+        offer 4 images to choose from
+  -->
   <div id="imageSelectorContainer">
     <ul  id="image-selector">
       <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox1" />
@@ -99,15 +106,19 @@
     </ul>
     <button id="saveBtn">Save</button>
   </div>
- 
+ <!-- Audio track for complete game -->
+  <!-- 1: last 10 second count down sound -->
   <audio id="tickerSound" src=".\Assets\Audio\countdown-from-10-105775.mp3"></audio>
+  <!-- 2: backgroud music that run while playing game -->
   <audio id="tickerSound1" src=".\Assets\Audio\moonlight-echoes-212720.mp3"></audio>
+  <!-- 3: game loose soung -->
   <audio id="tickerSound2" src=".\Assets\Audio\mixkit-falling-game-over-1942.wav"></audio>
+  <!-- 4: game win sound -->
   <audio id="tickerSound3" src=".\Assets\Audio\mixkit-ethereal-fairy-win-sound-2019.wav"></audio>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
-  
+  <!-- javascript file use to controll the whole game setup -->
   <script src=".\Assets\Js\script.js"></script>
  
 </body>
