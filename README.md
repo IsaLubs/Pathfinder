@@ -28,3 +28,8 @@ The Pathfinder game allows players to select difficulty levels (Easy, Medium, Ha
 - Control Instructions: Arrow keys/buttons for navigation.
 - Gameplay Area: Clear path and target destination (hole).
 - Pause/Reset Options: Buttons for pausing or resetting the game.
+
+## End Screen:
+
+- Results: Time taken, success/failure message.
+- Restart Option: Button to play again.
