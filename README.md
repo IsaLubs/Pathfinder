@@ -16,13 +16,13 @@ The Pathfinder game allows players to select difficulty levels (Easy, Medium, Ha
 - Welcome message and brief game description.
 - Start button leading to the game setup page.
 
-# Game Setup:
+## Game Setup:
 
 - Difficulty Selection: Easy, Medium, Hard.
 - Avatar Selection: Choose from a variety of avatars with preview images.
 - Start Game Button: Begins the game after selections.
 
-# Game Screen:
+## Game Screen:
 
 - Timer: Displays remaining time prominently.
 - Control Instructions: Arrow keys/buttons for navigation.
