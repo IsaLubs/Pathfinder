@@ -1,18 +1,68 @@
+@font-face {
+    font-family: 'ThaleahFat';
+    src: url('../fonts/ThaleahFat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+select, input, button {
+    font-family: 'ThaleahFat', sans-serif;
+}
+
 /* ####### main body backgroud color style code ####### */
 html, body {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
     padding: 0;
     margin: 0;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(-45deg, yellow 0%, yellow 25%, yellow 51%, #ff357f 100%);
-  
+    font-family: 'ThaleahFat', sans-serif;
+    background-image: url("../Images/bg1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
 }
+
+#help-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#help-modal {
+    background-color: rgb(0, 23, 109, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+#game-title {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#timer {
+    text-align: center;
+    font-size: 30px;
+}
+
 /* ####### main body backgoud size and color setup div end here ####### */
 #path_view {
     margin-top: 30px;
@@ -23,12 +73,15 @@ html, body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     margin-bottom: 10px;
 }
 .button-row a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    min-width: 60px !important; 
+    min-width: 40px !important; 
     height: 40px;
     max-width: 60px; 
     padding: 10px 10px;
@@ -37,8 +90,15 @@ html, body {
     padding-top: 5px;
     margin-right: 5px;
     padding-bottom: 5px;
-    background-color: black;
+    background-color: rgb(200, 21, 255, 0.8);
     color: white;
+    cursor: pointer;
+}
+
+#lowerBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ####### controller button style code end here ####### */
@@ -51,7 +111,7 @@ html, body {
     transform: translate(-50%, -50%);
     width: 400px;
     max-height: 300px;
-    background-color: rgb(238, 115, 115);
+    background-color: rgb(0, 23, 109, 0.9);
     border: 2px red #b18888;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -84,7 +144,7 @@ label {
 label img {
     height: 40px;
     width: 40px;
-    border: 1px solid gold;
+    border: 1px solid white;
     border-radius: 10px;
     transition-duration: 0.2s;
 }
@@ -94,7 +154,7 @@ label img {
     margin-bottom: 10px;
     margin-left: 40%;
     right: 50%;
-    background-color:#B27726;
+    background-color:rgb(200, 21, 255);
     font-size: 20px;
     color: white;
     border-radius: 10px;
@@ -115,8 +175,8 @@ label img {
 /* #######--------Avatar Selector stlye block ended here ####### */
 /* ####### path finder div style code ####### */
 #pathContainer {
-    top: 15px;
-    opacity: 0;
+    /* top: 15px; */
+    opacity: 1;
     display: inline-block;
     margin: auto;
     border-radius: 10px;
@@ -124,12 +184,13 @@ label img {
 #pathContainer #pathCanvas {
     margin: 0;
     display: block;
-    border: solid 6px red;
+    border: solid 6px rgb(200, 21, 255);
     height: 300px;
+    background-color: rgb(0, 23, 109, 0.7);
 }
 input, select {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.30);
+    background-color: rgba(200, 21, 255, 0.50);
     height: 45px;
     width: 150px;
     padding: 10px;
@@ -137,16 +198,16 @@ input, select {
     border-radius: 5px;
     color: white;
     display: inline-block;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     text-decoration: none;
     appearance: none;
 }
 input:hover, select:hover {
-	background-color: rgba(0, 0, 0, 0.70);
+	background-color: rgba(200, 21, 255, 0.70);
 }
 input:active, select:active {
-	background-color: black;
+	background-color: rgb(200, 21, 255);
 }
 input:focus, select:focus {
 	outline: none;
@@ -175,11 +236,11 @@ input:focus, select:focus {
 }
 
 #message1{
-    background-color: rgb(228, 76, 76) !important;
+    background-color: rgb(141, 1, 0, 0.9) !important;
     border-radius: 10px;
 }
 #message{
-    background-color: rgb(141, 240, 128) !important;
+    background-color: rgb(3, 89, 86, 0.9) !important;
     border-radius: 10px;
 }
 #Message-Container #message, #Message-Container1 #message1{
@@ -214,11 +275,11 @@ input:focus, select:focus {
     font-size: 3.2rem;
 }
 #home_page #path_view {
-    position: absolute;
+    /* position: absolute;
     top: 85px;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     width: 100%;
     height: auto;
 }
@@ -238,7 +299,7 @@ input:focus, select:focus {
 /* ####### game rules div style code ####### */
 #StartInstruction{
     font-size: 30px; 
-    height: 405px; 
+    /* height: 405px;  */
     display: flex; 
     flex-direction: column;
     text-align: center; 
@@ -253,7 +314,7 @@ input:focus, select:focus {
 /* ####### below code is control responsiveness for mobile view ####### */
 @media only screen and (max-width: 400px) {
 	input, select {
-	    width: 120px;
+	    width: 150px;
 	}
     #pathCanvas {
         width: 300px !important; 
