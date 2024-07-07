@@ -1,3 +1,138 @@
+let helpButton = document.getElementById("help-button");
+let helpBox = document.getElementById("help-box");
+helpBox.style.display = "none";
+let difficultyLevelSelect = document.getElementById("difficulty-level-Select");
+
+// add event listner to difficulty level select on change
+difficultyLevelSelect.addEventListener("change", (e) => {
+  difficulty = e.target.value;
+  const bodyElement = document.querySelector("body");
+  const inputs = document.getElementsByTagName("input");
+  const selects = document.getElementsByTagName("select");
+  const buttons = document.getElementsByTagName("button");
+  const pathCanvas = document.getElementById("pathCanvas");
+  const buttonRowATags = (document.getElementsByClassName("button-row")[0]).getElementsByTagName("a");
+  const imageSelectorContainer = document.getElementById("imageSelectorContainer");
+  const helpModal = document.getElementById("help-modal");
+  if (difficulty == 0 || difficulty == 10) {
+    bodyElement.style.backgroundImage = "url('Assets/Images/bg1.png')";
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].style.backgroundColor = "rgba(200, 21, 255, 0.50)";
+      inputs[i].addEventListener("mouseenter", () => {
+        inputs[i].style.backgroundColor = "rgba(200, 21, 255, 0.70)";
+      })
+      inputs[i].addEventListener("mouseleave", () => {
+        inputs[i].style.backgroundColor = "rgba(200, 21, 255, 0.50)";
+      })
+    }
+    for (let i = 0; i < selects.length; i++) {
+      selects[i].style.backgroundColor = "rgba(200, 21, 255, 0.50)";
+      selects[i].addEventListener("mouseenter", () => {
+        selects[i].style.backgroundColor = "rgba(200, 21, 255, 0.70)";
+      })
+      selects[i].addEventListener("mouseleave", () => {
+        selects[i].style.backgroundColor = "rgba(200, 21, 255, 0.50)";
+      })
+    }
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].style.backgroundColor = "rgba(200, 21, 255, 0.50)";
+      buttons[i].addEventListener("mouseenter", () => {
+        buttons[i].style.backgroundColor = "rgba(200, 21, 255, 0.70)";
+      })
+      buttons[i].addEventListener("mouseleave", () => {
+        buttons[i].style.backgroundColor = "rgba(200, 21, 255, 0.50)";
+      })
+    }
+    for (let i = 0; i < buttonRowATags.length; i++) {
+      buttonRowATags[i].style.backgroundColor = "rgba(200, 21, 255, 0.8)";
+    }
+    pathCanvas.style.borderColor = "rgba(200, 21, 255)";
+    pathCanvas.style.backgroundColor = "rgb(0, 23, 109, 0.7)";
+    imageSelectorContainer.style.backgroundColor = "rgb(0, 23, 109, 0.9)";
+    helpModal.style.backgroundColor = "rgb(0, 23, 109, 0.9)";
+  } else if (difficulty == 15) {
+    bodyElement.style.backgroundImage = "url('Assets/Images/bg2.png')";
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].style.backgroundColor = "rgba(255, 80, 0, 0.50)";
+      inputs[i].addEventListener("mouseenter", () => {
+        inputs[i].style.backgroundColor = "rgba(255, 80, 0, 0.70)";
+      })
+      inputs[i].addEventListener("mouseleave", () => {
+        inputs[i].style.backgroundColor = "rgba(255, 80, 0, 0.50)";
+      })
+    }
+    for (let i = 0; i < selects.length; i++) {
+      selects[i].style.backgroundColor = "rgba(255, 80, 0, 0.50)";
+      selects[i].addEventListener("mouseenter", () => {
+        selects[i].style.backgroundColor = "rgba(255, 80, 0, 0.70)";
+      })
+      selects[i].addEventListener("mouseleave", () => {
+        selects[i].style.backgroundColor = "rgba(255, 80, 0, 0.50)";
+      })
+    }
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].style.backgroundColor = "rgba(255, 80, 0, 0.50)";
+      buttons[i].addEventListener("mouseenter", () => {
+        buttons[i].style.backgroundColor = "rgba(255, 80, 0, 0.70)";
+      })
+      buttons[i].addEventListener("mouseleave", () => {
+        buttons[i].style.backgroundColor = "rgba(255, 80, 0, 0.50)";
+      })
+    }
+    for (let i = 0; i < buttonRowATags.length; i++) {
+      buttonRowATags[i].style.backgroundColor = "rgba(255, 80, 0, 0.8)";
+    }
+    pathCanvas.style.borderColor = "rgba(255, 80, 0)";
+    pathCanvas.style.backgroundColor = "rgb(69, 10, 28, 0.7)";
+    imageSelectorContainer.style.backgroundColor = "rgb(69, 10, 28, 0.9)";
+    helpModal.style.backgroundColor = "rgb(69, 10, 28, 0.9)";
+  } else if (difficulty == 25) {
+    bodyElement.style.backgroundImage = "url('Assets/Images/bg3.png')";
+    for (let i = 0; i < inputs.length; i++) {
+      inputs[i].style.backgroundColor = "rgba(255, 222, 37, 0.50)";
+      inputs[i].addEventListener("mouseenter", () => {
+        inputs[i].style.backgroundColor = "rgba(255, 222, 37, 0.70)";
+      })
+      inputs[i].addEventListener("mouseleave", () => {
+        inputs[i].style.backgroundColor = "rgba(255, 222, 37, 0.50)";
+      })
+    }
+    for (let i = 0; i < selects.length; i++) {
+      selects[i].style.backgroundColor = "rgba(255, 222, 37, 0.50)";
+      selects[i].addEventListener("mouseenter", () => {
+        selects[i].style.backgroundColor = "rgba(255, 222, 37, 0.70)";
+      })
+      selects[i].addEventListener("mouseleave", () => {
+        selects[i].style.backgroundColor = "rgba(255, 222, 37, 0.50)";
+      })
+    }
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].style.backgroundColor = "rgba(255, 222, 37, 0.50)";
+      buttons[i].addEventListener("mouseenter", () => {
+        buttons[i].style.backgroundColor = "rgba(255, 222, 37, 0.70)";
+      })
+      buttons[i].addEventListener("mouseleave", () => {
+        buttons[i].style.backgroundColor = "rgba(255, 222, 37, 0.50)";
+      })
+    }
+    for (let i = 0; i < buttonRowATags.length; i++) {
+      buttonRowATags[i].style.backgroundColor = "rgba(255, 222, 37, 0.8)";
+    }
+    pathCanvas.style.borderColor = "rgba(255, 222, 37)";
+    pathCanvas.style.backgroundColor = "rgb(7, 31, 77, 0.7)";
+    imageSelectorContainer.style.backgroundColor = "rgb(7, 31, 77, 0.9)";
+    helpModal.style.backgroundColor = "rgb(7, 31, 77, 0.9)";
+  }
+});
+
+helpButton.addEventListener("click", () => {
+  if (helpBox.style.display === "none") {
+    helpBox.style.display = "flex";
+  } else {
+    helpBox.style.display = "none";
+  }
+});
+
 var selectedImageSrc = ""; // variable ensure the selected avatar src
 
 // Function to generate a random number between 0 and max
@@ -195,7 +330,7 @@ function Drawpath(path, ctx, cellsize, endSprite = null) {
   var cellSize = cellsize;
   var drawEndMethod;
   ctx.lineWidth = cellSize / 20;
-  ctx.strokeStyle = 'purple'; 
+  ctx.strokeStyle = 'lightgray';
   // Method to redraw the path with a new cell size
   this.redrawpath = function(size) {
     cellSize = size;
@@ -378,7 +513,7 @@ function Player(path, c, _cellsize, onComplete, sprite = null) {
     moves++;
     switch (e.keyCode) {
       case 65:
-      case 37: 
+      case 37:
         if (cell.w == true) {
           removeSprite(cellCoords);
           cellCoords = {
@@ -560,24 +695,24 @@ function makePath() {
     return; 
   }
   
-  var instructionElement = document.getElementById('arrow-instruction');
+  // var instructionElement = document.getElementById('arrow-instruction');
   var path_canvas = document.getElementById('pathCanvas');
-  var arrow_intruction = document.getElementById('arrow-instruction');
+  // var arrow_intruction = document.getElementById('arrow-instruction');
   path_canvas.style.height = '400px'
-  arrow_intruction.style.paddingTop = '100px';
+  // arrow_intruction.style.paddingTop = '100px';
 
-  window.addEventListener('resize', () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 400) {
-      arrow_intruction.style.paddingTop = '20px';
-    } else {
-      arrow_intruction.style.paddingTop = '80px';
-    }
-});
-if (window.innerWidth < 400) {
-  arrow_intruction.style.paddingTop = '20px';
-}
-  instructionElement.style.marginTop = '425' + 'px'; 
+  // window.addEventListener('resize', () => {
+  //   const screenWidth = window.innerWidth;
+  //   if (screenWidth < 400) {
+  //     arrow_intruction.style.paddingTop = '20px';
+  //   } else {
+  //     arrow_intruction.style.paddingTop = '80px';
+  //   }
+  // });
+  // if (window.innerWidth < 400) {
+  //   arrow_intruction.style.paddingTop = '20px';
+  // }
+  // instructionElement.style.marginTop = '425' + 'px'; 
   var startinstructionElement = document.getElementById('StartInstruction');
   startinstructionElement.style.display = 'none'; 
   
@@ -647,13 +782,13 @@ function imageSelector() {
       isImageSelected = true;
       imageSelectorContainer.style.display = 'none';
       alert('Image selected successfully. You can start the game now.');
-      if (selectedImageSrc.includes('lion.png')) {
-        document.body.style.backgroundImage = "linear-gradient(-45deg, red 0%, red 25%, red 51%, #ff357f 100%)";
-      } else if (selectedImageSrc.includes('run.png')) {
-        document.body.style.backgroundImage = "linear-gradient(-45deg, green 0%, green 25%, green 51%, #ff357f 100%)";
-      } else if (selectedImageSrc.includes('sedan.png')) {
-        document.body.style.backgroundImage = "linear-gradient(-45deg, blue 0%, blue 25%, blue 51%, #ff357f 100%)";
-      }
+      // if (selectedImageSrc.includes('lion.png')) {
+      //   document.body.style.backgroundImage = "linear-gradient(-45deg, red 0%, red 25%, red 51%, #ff357f 100%)";
+      // } else if (selectedImageSrc.includes('run.png')) {
+      //   document.body.style.backgroundImage = "linear-gradient(-45deg, green 0%, green 25%, green 51%, #ff357f 100%)";
+      // } else if (selectedImageSrc.includes('sedan.png')) {
+      //   document.body.style.backgroundImage = "linear-gradient(-45deg, blue 0%, blue 25%, blue 51%, #ff357f 100%)";
+      // }
       makePath();
       
     } else {
@@ -663,8 +798,8 @@ function imageSelector() {
 }
 // Function to reset the game
 function resetGame() {
-  var instructionElement = document.getElementById('arrow-instruction');
-  instructionElement.style.marginTop = '20' + 'px'; 
+  // var instructionElement = document.getElementById('arrow-instruction');
+  // instructionElement.style.marginTop = '20' + 'px'; 
   var startinstructionElement = document.getElementById('StartInstruction');
   startinstructionElement.style.display = 'flex'; 
   location.reload(true)
