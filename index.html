@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Path Finder</title>
   <link rel="stylesheet" href="./Assets/CSS/style.css">
   <style>
@@ -12,15 +13,36 @@
 </head>
 
 <body>
+  <!-- help button -->
+   <img src="/Assets/Images/help.png" alt="" id="help-button" style="position: fixed; bottom: 10px; right: 10px; z-index: 99999; cursor: pointer;">
+  <!-- help box -->
+  <div id="help-box">
+    <div id="help-modal">
+      <p id="game-title">Path Finder - Rules</p>
+      <div>
+        <p style="font-size: 24px;">Rules for the game</p>
+        <ol>
+          <li id="rulesBullet">Select Level before Start</li>
+          <li id="rulesBullet1">Select the Avatar before start</li>
+          <li id="rulesBullet2">Finish the path before time</li>
+        </ol>
+      </div>
+      <p style="display: flex; align-items: center; font-size: 24px;">
+        Use button or arrow <img src="./Assets/Images/arrow2.png" alt="" style="width: 60px;">
+        keys to move the mpuse to the hole!
+      </p>
+    </div>
+  </div>
   <!-- Main div -->
   <div id="home_page">
+    <p id="game-title">Path Finder</p>
     <!-- Winner div block show number of move and time taken while game play -->
     <div id="Message-Container">
       <div id="message">
         <h1>Congratulations!</h1>
         <p>You are done.</p>
         <p id="moves"></p>
-        <input id="okBtnonwin" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again!" >
+        <input id="okBtnonwin" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again!">
       </div>
     </div>
     <!-- winner brust animation div -->
@@ -30,7 +52,7 @@
       <div id="message1">
         <h1>Sorry !!</h1>
         <p>You Loose.</p>
-        <input id="okBtnosloose" type="button" onclick="toggleVisablity('Message-Container1')" value="Try Again!" >
+        <input id="okBtnosloose" type="button" onclick="toggleVisablity('Message-Container1')" value="Try Again!">
       </div>
     </div>
 
@@ -39,25 +61,20 @@
     <div id="stage-selector-menu">
       <div id="selector-menu" class="custom-select">
         <select id="difficulty-level-Select">
-                  <option value="0">Select Level</option>
-                  <option value="10">Easy</option>
-                  <option value="15">Medium</option>
-                  <option value="25">Hard</option>
-              </select>
+          <option value="0">Select Level</option>
+          <option value="10">Easy</option>
+          <option value="15">Medium</option>
+          <option value="25">Hard</option>
+        </select>
       </div>
       <!-- game start button to run the game -->
-      <input id="Startbtn" type="button" onclick="makePath()" value="Start" >
+      <input id="Startbtn" type="button" onclick="makePath()" value="Start">
     </div>
     <!-- game rules div which define games rules in the start -->
-    <div id="StartInstruction" > Rules for the game
-      <ol>
-        <li id="rulesBullet">Select Level before Start</li>
-        <li id="rulesBullet1">Select the Avatar before start</li>
-        <li id="rulesBullet2">Finish the path before time</li>
-      </ol>
+    <div id="StartInstruction"> 
     </div>
     <!-- pathview game div which show game randomly generated canvas -->
-    <div id="path_view"> 
+    <div id="path_view">
       <!-- game block div which show path -->
       <div id="pathContainer">
         <canvas id="pathCanvas" class="border" height="1100" width="1100"></canvas>
@@ -66,35 +83,45 @@
       <div class="button-row">
         <div id="upperBtn">
           <a id="upBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
-              <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+              viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
+              <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
             </svg>
           </a>
 
         </div>
         <div id="lowerBtn">
           <a class="left_btn" id="leftBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
-              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left"
+              viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
+              <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
             </svg>
           </a>
           <a id="downBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
-              <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down"
+              viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
+              <path fill-rule="evenodd"
+                d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
             </svg>
           </a>
           <a id="rightBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
-              <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+              viewBox="0 0 16 16" stroke="currentColor" stroke-width="2">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
             </svg>
-            
           </a>
         </div>
       </div>
     </div>
     <!-- instruction for controller use -->
-    <p id="arrow-instruction">Use button or arrow <img src="./Assets/Images/arrow2.png" alt="" style="width: 60px;">  keys to move the mpuse to the hole!</p>
-     <!-- timer div to show count down timer in game -->
+    <p id="arrow-instruction">
+      <!-- Use button or arrow <img src="./Assets/Images/arrow2.png" alt="" style="width: 60px;">
+      keys to move the mpuse to the hole! -->
+    </p>
+    <!-- timer div to show count down timer in game -->
     <div style="height: 30px;" id="timer">Time left: <span id="time">00:00</span></div>
 
   </div>
@@ -102,27 +129,27 @@
         offer 4 images to choose from
   -->
   <div id="imageSelectorContainer">
-    <ul  id="image-selector">
-      <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox1" >
-        <label for="checkbox1"><img src="./Assets/Images/mouse.png" alt="mouse.png" >
+    <ul id="image-selector">
+      <li id="image-checkbox"><input type="checkbox" class="checkboxstyle" id="checkbox1">
+        <label for="checkbox1"><img src="./Assets/Images/mouse.png" alt="mouse.png">
         </label>
       </li>
-          <li id="image-checkbox1"><input type="checkbox" class="checkboxstyle" id="checkbox2" >
-        <label for="checkbox2"><img src="./Assets/Images/run.png" alt="run.png" >
+      <li id="image-checkbox1"><input type="checkbox" class="checkboxstyle" id="checkbox2">
+        <label for="checkbox2"><img src="./Assets/Images/run.png" alt="run.png">
         </label>
       </li>
-        <li id="image-checkbox2"><input type="checkbox" class="checkboxstyle" id="checkbox3" >
-        <label for="checkbox3"><img src="./Assets/Images/lion.png" alt="lion.png" >
+      <li id="image-checkbox2"><input type="checkbox" class="checkboxstyle" id="checkbox3">
+        <label for="checkbox3"><img src="./Assets/Images/lion.png" alt="lion.png">
         </label>
       </li>
-        <li id="image-checkbox3"><input type="checkbox" class="checkboxstyle" id="checkbox4" >
-        <label for="checkbox4"><img src="./Assets/Images/sedan.png" alt="sedan.png" >
+      <li id="image-checkbox3"><input type="checkbox" class="checkboxstyle" id="checkbox4">
+        <label for="checkbox4"><img src="./Assets/Images/sedan.png" alt="sedan.png">
         </label>
       </li>
     </ul>
     <button id="saveBtn">Save</button>
   </div>
- <!-- Audio track for complete game -->
+  <!-- Audio track for complete game -->
   <!-- 1: last 10 second count down sound -->
   <audio id="tickerSound" src="./Assets/Audio/countdown-from-10-105775.mp3"></audio>
   <!-- 2: backgroud music that run while playing game -->
@@ -136,6 +163,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
   <!-- javascript file use to controll the whole game setup -->
   <script src="./Assets/Js/script.js"></script>
- 
 </body>
+
 </html>
