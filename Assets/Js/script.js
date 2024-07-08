@@ -1,6 +1,3 @@
-let helpButton = document.getElementById("help-button");
-let helpBox = document.getElementById("help-box");
-helpBox.style.display = "none";
 let difficultyLevelSelect = document.getElementById("difficulty-level-Select");
 
 // add event listner to difficulty level select on change
@@ -13,7 +10,6 @@ difficultyLevelSelect.addEventListener("change", (e) => {
   const pathCanvas = document.getElementById("pathCanvas");
   const buttonRowATags = (document.getElementsByClassName("button-row")[0]).getElementsByTagName("a");
   const imageSelectorContainer = document.getElementById("imageSelectorContainer");
-  const helpModal = document.getElementById("help-modal");
   if (difficulty == 0 || difficulty == 10) {
     bodyElement.style.backgroundImage = "url('Assets/Images/bg1.png')";
     for (let i = 0; i < inputs.length; i++) {
@@ -49,7 +45,6 @@ difficultyLevelSelect.addEventListener("change", (e) => {
     pathCanvas.style.borderColor = "rgba(200, 21, 255)";
     pathCanvas.style.backgroundColor = "rgb(0, 23, 109, 0.7)";
     imageSelectorContainer.style.backgroundColor = "rgb(0, 23, 109, 0.9)";
-    helpModal.style.backgroundColor = "rgb(0, 23, 109, 0.9)";
   } else if (difficulty == 15) {
     bodyElement.style.backgroundImage = "url('Assets/Images/bg2.png')";
     for (let i = 0; i < inputs.length; i++) {
@@ -85,7 +80,6 @@ difficultyLevelSelect.addEventListener("change", (e) => {
     pathCanvas.style.borderColor = "rgba(255, 80, 0)";
     pathCanvas.style.backgroundColor = "rgb(69, 10, 28, 0.7)";
     imageSelectorContainer.style.backgroundColor = "rgb(69, 10, 28, 0.9)";
-    helpModal.style.backgroundColor = "rgb(69, 10, 28, 0.9)";
   } else if (difficulty == 25) {
     bodyElement.style.backgroundImage = "url('Assets/Images/bg3.png')";
     for (let i = 0; i < inputs.length; i++) {
@@ -121,15 +115,6 @@ difficultyLevelSelect.addEventListener("change", (e) => {
     pathCanvas.style.borderColor = "rgba(255, 222, 37)";
     pathCanvas.style.backgroundColor = "rgb(7, 31, 77, 0.7)";
     imageSelectorContainer.style.backgroundColor = "rgb(7, 31, 77, 0.9)";
-    helpModal.style.backgroundColor = "rgb(7, 31, 77, 0.9)";
-  }
-});
-
-helpButton.addEventListener("click", () => {
-  if (helpBox.style.display === "none") {
-    helpBox.style.display = "flex";
-  } else {
-    helpBox.style.display = "none";
   }
 });
 
@@ -337,7 +322,7 @@ function Drawpath(path, ctx, cellsize, endSprite = null) {
     ctx.lineWidth = cellSize / 30;
     drawMap();
     drawEndMethod();
-  }; 
+  };
   // Function to draw a cell based on its walls
   function drawCell(xCord, yCord, cell) {
     var x = xCord * cellSize;
