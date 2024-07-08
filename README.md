@@ -3,7 +3,8 @@
 [Visit the website here](https://isalubs.github.io/Pathfinder/)
 
 The Pathfinder project is a game where players select a difficulty level (Easy, Medium, Hard) and an avatar, then navigate a path within a time limit using buttons or arrow keys. The objective is to reach the end of the path before time runs out. The project includes rules, interactive elements, and visual feedback for winning or losing. For more details.
-![Screenshot 2024-06-22 124324](https://github.com/IsaLubs/Pathfinder/assets/147058041/6fc16644-c6e3-469e-95ab-16e6923debf7)
+![Screenshot 2024-07-08 193056](https://github.com/IsaLubs/Pathfinder/assets/147058041/9e2163ba-9a5a-4943-a7d5-a84b7f9d2272)
+
 
 # Features.
 
