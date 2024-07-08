@@ -13,26 +13,6 @@
 </head>
 
 <body>
-  <!-- help button -->
-   <img src="/Assets/Images/help.png" alt="" id="help-button" style="position: fixed; bottom: 10px; right: 10px; z-index: 99999; cursor: pointer;">
-  <!-- help box -->
-  <div id="help-box">
-    <div id="help-modal">
-      <p id="game-title">Path Finder - Rules</p>
-      <div>
-        <p style="font-size: 24px;">Rules for the game</p>
-        <ol>
-          <li id="rulesBullet">Select Level before Start</li>
-          <li id="rulesBullet1">Select the Avatar before start</li>
-          <li id="rulesBullet2">Finish the path before time</li>
-        </ol>
-      </div>
-      <p style="display: flex; align-items: center; font-size: 24px;">
-        Use button or arrow <img src="./Assets/Images/arrow2.png" alt="" style="width: 60px;">
-        keys to move the mpuse to the hole!
-      </p>
-    </div>
-  </div>
   <!-- Main div -->
   <div id="home_page">
     <p id="game-title">Path Finder</p>
@@ -71,7 +51,11 @@
       <input id="Startbtn" type="button" onclick="makePath()" value="Start">
     </div>
     <!-- game rules div which define games rules in the start -->
-    <div id="StartInstruction"> 
+    <div id="StartInstruction">
+      Rules for the game
+      <p id="rulesBullet">1. Select Level before Start</p>
+      <p id="rulesBullet1">2. Select the Avatar before start</p>
+      <p id="rulesBullet2">3. Finish the path before time</p>
     </div>
     <!-- pathview game div which show game randomly generated canvas -->
     <div id="path_view">
@@ -118,8 +102,8 @@
     </div>
     <!-- instruction for controller use -->
     <p id="arrow-instruction">
-      <!-- Use button or arrow <img src="./Assets/Images/arrow2.png" alt="" style="width: 60px;">
-      keys to move the mpuse to the hole! -->
+      Use button or arrow <img src="./Assets/Images/arrow2.png" alt="" style="width: 60px;">
+      keys to move the mpuse to the hole!
     </p>
     <!-- timer div to show count down timer in game -->
     <div style="height: 30px;" id="timer">Time left: <span id="time">00:00</span></div>
