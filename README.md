@@ -16,4 +16,5 @@ Pathfinder is a fully responsive game designed with a mobile-first approach, ens
   ![Screenshot 2024-07-15 134750](https://github.com/user-attachments/assets/9922e5bd-7b3d-4736-97a3-cc38bcd081ac)
 ## Levels.
  - Players can select from three difficulty levels: Easy, Medium, and Hard.
-   ![thumbnail](https://github.com/user-attachments/assets/1016b89a-a104-467e-82a9-800845c60dcf)
+   ![thumbnail (1)](https://github.com/user-attachments/assets/134c030f-9d3a-4454-80a5-65d105f5e5bd)
+
