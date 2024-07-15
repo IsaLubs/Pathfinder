@@ -33,6 +33,7 @@ Pathfinder is a fully responsive game designed with a mobile-first approach, ens
 ![Screenshot 2024-07-15 144710](https://github.com/user-attachments/assets/050c3dfd-0437-40bb-bdb5-baf8294d02e7)
 
 ## Time Challenge and cound down
+- As a participant engaging in Pathfinder for the first time, I desire a clear and conspicuous presentation of essential information during gameplay. Specifically, I would like real-time updates on the countdown timer, the number of successful moves made, and the progress toward reaching the goal. These crucial elements should be prominently displayed throughout the gaming experience, ensuring that I can effortlessly track my progress and adjust my strategy accordingly.
 - The game includes a countdown timer to increase difficulty.
 ![Screenshot 2024-07-15 145305](https://github.com/user-attachments/assets/05b4f77e-deb5-446e-a3ac-f68d65a5b6f0)
 
