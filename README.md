@@ -150,3 +150,23 @@ I deployed this website by using GitPages and following the below steps:
 5. In the source section, select branch 'Main' and save
 6. The page is then given a site URL which you will see above the source section, it will look like the following:
 ![Screenshot 2024-07-15 162535](https://github.com/user-attachments/assets/87b33e90-85a6-4f3a-b9a7-a09b939fe81e)
+-----
+## Credits
+
+I have used a number of resources to produce this website, where code has been used found from another source this is credited as a comment within the HTML, CSS and JS files.
+
+The following websites/articles were used for research and guidance:
+
+- [Wireframes](https://careerfoundry.com/en/blog/ux-design/wireframing-mobile-apps-websites/)
+
+- [Design tips](https://99designs.co.uk/blog/tips/responsive-web-design-key-tips-and-approaches/)
+
+- [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+
+- [Accessibility for burger menu](https://medium.com/@linlinghao/accessibility-for-hamburger-menu-a37fa9617a89)
+
+- [Read more button](https://www.w3schools.com/howto/howto_js_read_more.asp)
+  This code was used but the JS function was heavily edited.
+
+- [Image grid](https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/)
+- [Visually hidden elements](https://www.w3.org/WAI/tutorials/forms/labels/)
