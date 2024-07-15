@@ -22,3 +22,10 @@ Pathfinder is a fully responsive game designed with a mobile-first approach, ens
 ## Avatars
 - Players choose an avatar before starting the game.
   ![Screenshot 2024-07-15 140248](https://github.com/user-attachments/assets/5bb36748-4ae7-4731-978e-0cce676aa997)
+
+  ## Objective
+  - Navigate the avatar through a path to the hole before the timer runs out.
+
+  ## Controls
+  - Use buttons or arrow keys to move the avatar.
+![Screenshot 2024-07-15 144710](https://github.com/user-attachments/assets/050c3dfd-0437-40bb-bdb5-baf8294d02e7)
