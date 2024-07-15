@@ -51,3 +51,7 @@ Real-Time Progress Feedback: As a first-time user, you'll appreciate Pathfinder'
 Winning the Game: Upon successfully navigating your avatar to the hole before the timer runs out, a celebratory "CONGRATULATIONS!" message will be displayed. Additionally, the total number of moves you made during the game will be updated and presented in real-time. This feature acknowledges your achievement and keeps you informed about your performance, creating an engaging and rewarding experience. It celebrates your success while offering a transparent view of your gameplay metrics.
 ![Screenshot 2024-07-15 152137](https://github.com/user-attachments/assets/51ed1e06-20ef-4c79-bd86-52e794f653af)
 
+## Performance Assessment with Lighthouse
+Lighthouse, a feature of Google Chrome Developer Tools, is used to assess the performance of the website and its features. Initially, Pathfinder achieved a high-performance score, indicating that the game loads quickly, runs smoothly, and provides an excellent user experience. This assessment reflects the efficiency of the game's design and implementation, ensuring that players enjoy a seamless and responsive gaming experience.
+![thumbnail (1)](https://github.com/user-attachments/assets/9265faf6-6325-43eb-add5-5f97c40aedac)
+
