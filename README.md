@@ -1,11 +1,11 @@
 # Pathfinder
-
+-----
 [Visit the website here](https://isalubs.github.io/Pathfinder/)
 
 The Pathfinder project is a game where players select a difficulty level (Easy, Medium, Hard) and an avatar, then navigate a path within a time limit using buttons or arrow keys. The objective is to reach the end of the path before time runs out. The project includes rules, interactive elements, and visual feedback for winning or losing. For more details.
 
 ![Screenshot 2024-07-15 133508](https://github.com/user-attachments/assets/e4932426-e044-4a6c-9eae-6e01f2b4b7e9)
-
+-----
 # Features.
 Pathfinder is a fully responsive game designed with a mobile-first approach, ensuring optimal play on various devices. The game is divided into different sections, offering players a dynamic and engaging experience. With a focus on user enjoyment and mental agility, Pathfinder combines intuitive controls, time-based challenges, and customizable avatars to create a captivating journey. The game's structure and design aim to provide both amusement and cognitive stimulation, making it an enriching and entertaining choice for users seeking a fun and mentally engaging activity.
 
@@ -54,14 +54,14 @@ Winning the Game: Upon successfully navigating your avatar to the hole before th
 ## Performance Assessment with Lighthouse
 Lighthouse, a feature of Google Chrome Developer Tools, is used to assess the performance of the website and its features. Initially, Pathfinder achieved a high-performance score, indicating that the game loads quickly, runs smoothly, and provides an excellent user experience. This assessment reflects the efficiency of the game's design and implementation, ensuring that players enjoy a seamless and responsive gaming experience.
 ![Screenshot 2024-07-15 134008](https://github.com/user-attachments/assets/545dde99-0bfe-49ef-99cb-37fe7d3bed75)
-
+-----
 ## Validator Testing
 - During the development of Pathfinder, I validated both HTML and CSS code multiple times to ensure minimal errors or warnings at the final stages. This process allowed for incremental improvements to the code, resulting in a clean and efficient final product. Upon completion, there were zero errors found, demonstrating the thoroughness and attention to detail in the development process. This rigorous validation ensures that the game runs smoothly and provides a reliable experience for all users.
 ### HTML
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-maths%2F)
     ![Screenshot 2024-07-15 133241](https://github.com/user-attachments/assets/2e6eb28a-c6e7-46ae-b1b0-d0eea04400a1)
-
+-----
   - JavaScript
   - No errors were found when passing through the official [Jshint validator](https://jshint.com/)
   - The following metrics were returned:
@@ -69,12 +69,12 @@ Lighthouse, a feature of Google Chrome Developer Tools, is used to assess the pe
   - Function with the largest signature takes 2 arguments, while the median is 0.
   - Largest function has 21 statements in it, while the median is 6.
   - The most complex function has a cyclomatic complexity value of 7 while the median is 1.
-
+-----
 - CSS
 
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-maths%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
     ![Screenshot 2024-07-15 133324](https://github.com/user-attachments/assets/81455b8b-6999-4970-99e3-b3232189c480)
-
+----
 ## Technologies Used
 
 I have used several technologies that have enabled this design to work:
@@ -125,6 +125,18 @@ I have used several technologies that have enabled this design to work:
   - Used to generate repsonsive image used in README file.
 - [Flaticon](https://www.flaticon.com/search?word=anaconda&k=1701933749453&sign-up=email)
   - Used for my images used in the came.
+----
+  ## Cloning the GitHub Repository
+
+Cloning your repository will allow you to download a local version of the repository to be worked on. Cloning can also be a great way to backup your work.
+
+1. Find the relevant GitHub repository
+2. Press the arrow on the Code button
+3. Copy the link that is shown in the drop-down
+4. Now open Gitpod & select the directory location where you would like the clone created
+5. In the terminal type 'git clone' & then paste the link you copied in GitHub
+6. Press enter and your local clone will be created.
+----
 ## Deployment
 
 I deployed this website by using GitPages and following the below steps:
