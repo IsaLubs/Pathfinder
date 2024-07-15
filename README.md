@@ -75,6 +75,28 @@ Lighthouse, a feature of Google Chrome Developer Tools, is used to assess the pe
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-maths%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
     ![Screenshot 2024-07-15 133324](https://github.com/user-attachments/assets/81455b8b-6999-4970-99e3-b3232189c480)
 ----
+**Chrome Dev Tools**
+
+Chrome dev tools was used throughout the development of the project to test responsiveness.
+Responsiveness was tested using Dev Tools to emulate the following devices,
+- Iphone 5
+- Iphone 6/7/8
+- Iphone 6/7/8 Plus
+- Iphone X
+- Ipad
+- Ipad Pro
+![Screenshot 2024-07-15 165746](https://github.com/user-attachments/assets/ba190602-3439-4961-9966-a4405266adef)
+
+**Browser Testing**
+
+During development, the testing was mainly done solely using Google Chrome.
+
+In production the site has been tested on the following browsers,
+- Google Chrome
+- Mozilla Firefox
+- Opera
+- Microsoft Edge
+  ----
 ## Technologies Used
 
 I have used several technologies that have enabled this design to work:
