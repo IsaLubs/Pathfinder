@@ -170,3 +170,19 @@ The following websites/articles were used for research and guidance:
 
 - [Image grid](https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/)
 - [Visually hidden elements](https://www.w3.org/WAI/tutorials/forms/labels/)
+-----
+# Acknowledgments
+I would like to express my sincere gratitude to the original author of the tutorial on creating a Maze Game using JavaScript, which served as the foundation for this project. The invaluable insights and guidance provided by Devression (YouTube) on their tutorial were instrumental in shaping and enhancing my understanding of JavaScript programming.
+
+I extend my appreciation to Devression (YouTube) for sharing their expertise and making the world of web development more accessible. This modified version of the tutorial incorporates personal adaptations and enhancements, guided by the comprehensive teachings of the original tutorial.
+
+Features of the Modified Pathfinder Game
+This modified game includes the following enhancements compared to the original Maze Game:
+
+- Background Music: Added to enhance the immersive experience.
+- Multiple Levels: Players can choose from Easy, Medium, and Hard levels.
+- Improved Layout: Enhanced visual design for a more engaging user interface.
+- Real-Time Feedback: Display of countdown timer, number of successful moves, and progress.
+- Avatar Selection: Players can choose from various avatars for a personalized experience.
+
+I would like to thank Code Institute support and Jonathan Zakrisson, an alumnus and fellow student, for their support and guidance throughout the project. Additionally, I appreciate the feedback and encouragement from other fellow students on Slack. Thank you for visiting the Pathfinder game website. Explore the game and embark on a fun and challenging adventure with us!
