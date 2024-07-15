@@ -22,6 +22,11 @@ Pathfinder is a fully responsive game designed with a mobile-first approach, ens
 ![thumbnail (1)](https://github.com/user-attachments/assets/cd81a8ba-44e3-4bdc-a9d2-2dbb04e43deb)
 
 ## Avatars
+Selecting and Using Avatars: Before starting the game, players can choose from a variety of avatars. Each avatar represents the player’s character within the game and adds a personalized touch to the experience.
+
+- Selection: Players can browse through a selection of avatars and choose one that appeals to them.
+- Representation: Once selected, the avatar will be used to navigate through the game’s levels.
+- Visual Feedback: The avatar's movements provide immediate visual feedback, making it easy for players to see their actions and responses in real-time.
 - Players choose an avatar before starting the game.
   ![Screenshot 2024-07-15 140248](https://github.com/user-attachments/assets/5bb36748-4ae7-4731-978e-0cce676aa997)
 
