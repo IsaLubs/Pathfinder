@@ -61,3 +61,7 @@ Lighthouse, a feature of Google Chrome Developer Tools, is used to assess the pe
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcode-institute-org.github.io%2Flove-maths%2F)
     ![Screenshot 2024-07-15 133241](https://github.com/user-attachments/assets/2e6eb28a-c6e7-46ae-b1b0-d0eea04400a1)
+- CSS
+
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-maths%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+    ![Screenshot 2024-07-15 133324](https://github.com/user-attachments/assets/81455b8b-6999-4970-99e3-b3232189c480)
