@@ -29,3 +29,8 @@ Pathfinder is a fully responsive game designed with a mobile-first approach, ens
   ## Controls
   - Use buttons or arrow keys to move the avatar.
 ![Screenshot 2024-07-15 144710](https://github.com/user-attachments/assets/050c3dfd-0437-40bb-bdb5-baf8294d02e7)
+
+## Time Challenge and cound down
+- The game includes a countdown timer to increase difficulty.
+![Screenshot 2024-07-15 145305](https://github.com/user-attachments/assets/05b4f77e-deb5-446e-a3ac-f68d65a5b6f0)
+
