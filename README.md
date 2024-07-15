@@ -15,8 +15,10 @@ Pathfinder is a fully responsive game designed with a mobile-first approach, ens
 - Clear Instructions: Upon starting, you'll be greeted with clear and concise instructions on how to play the game. This ensures that you understand the gameplay mechanics right away, allowing you to dive into the fun without any confusion.
   ![Screenshot 2024-07-15 134750](https://github.com/user-attachments/assets/9922e5bd-7b3d-4736-97a3-cc38bcd081ac)
 ## Levels.
- - Players can select from three difficulty levels: Easy, Medium, and Hard.
+- Explore the "Select Levels" Button: As a first-time user, you can easily explore the "Select Levels" button, which leads you to a dedicated section detailing the game's functionality. This helps you understand the various features, including the three difficulty levels: Easy, Medium, and Hard, before diving in.
 
+- Start a New Game: Additionally, clicking the "Select Levels" button allows you to choose from the three difficulty levels and start a new game, as described in the instructions. This straightforward approach ensures you can quickly begin playing without any hassle.
+  
 ![thumbnail (1)](https://github.com/user-attachments/assets/cd81a8ba-44e3-4bdc-a9d2-2dbb04e43deb)
 
 ## Avatars
