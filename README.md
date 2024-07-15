@@ -46,3 +46,8 @@ Use Buttons or Arrow Keys to Move the Avatar: The game provides intuitive contro
 - The game includes a countdown timer to increase difficulty.
 ![Screenshot 2024-07-15 145305](https://github.com/user-attachments/assets/05b4f77e-deb5-446e-a3ac-f68d65a5b6f0)
 
+## Winning the Game and Score Display
+Real-Time Progress Feedback: As a first-time user, you'll appreciate Pathfinder's real-time feedback on your progress. The game includes a countdown timer, the number of successful moves, and progress toward reaching the goal, all prominently displayed throughout the game.
+Winning the Game: Upon successfully navigating your avatar to the hole before the timer runs out, a celebratory "CONGRATULATIONS!" message will be displayed. Additionally, the total number of moves you made during the game will be updated and presented in real-time. This feature acknowledges your achievement and keeps you informed about your performance, creating an engaging and rewarding experience. It celebrates your success while offering a transparent view of your gameplay metrics.
+![Screenshot 2024-07-15 152137](https://github.com/user-attachments/assets/51ed1e06-20ef-4c79-bd86-52e794f653af)
+
