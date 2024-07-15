@@ -29,7 +29,11 @@ Pathfinder is a fully responsive game designed with a mobile-first approach, ens
   - Navigate the avatar through a path to the hole before the timer runs out.
 
   ## Controls
-  - Use buttons or arrow keys to move the avatar.
+Use Buttons or Arrow Keys to Move the Avatar: The game provides intuitive controls using either on-screen buttons or the arrow keys on your keyboard.
+
+- Arrow Keys: Use the Up, Down, Left, and Right arrow keys to navigate your avatar through the path.
+- On-Screen Buttons: If you prefer touch controls, tap the on-screen directional buttons to move your avatar in the desired direction.
+- Use buttons or arrow keys to move the avatar.
 ![Screenshot 2024-07-15 144710](https://github.com/user-attachments/assets/050c3dfd-0437-40bb-bdb5-baf8294d02e7)
 
 ## Time Challenge and cound down
