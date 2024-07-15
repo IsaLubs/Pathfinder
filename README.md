@@ -74,3 +74,54 @@ Lighthouse, a feature of Google Chrome Developer Tools, is used to assess the pe
 
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fvalidator.w3.org%2Fnu%2F%3Fdoc%3Dhttps%253A%252F%252Fcode-institute-org.github.io%252Flove-maths%252F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
     ![Screenshot 2024-07-15 133324](https://github.com/user-attachments/assets/81455b8b-6999-4970-99e3-b3232189c480)
+
+## Technologies Used
+
+I have used several technologies that have enabled this design to work:
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  - Used as the basic building block for the project and to structure the content.
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+  - Used to style all the web content across the project.
+- [JavaScript](https://www.javascript.com/)
+  - Used for the responsive navbar, form, scroll down arrow and read more/read less button.
+- [Google Fonts](https://fonts.google.com/)
+  - Used to obtain the fonts linked in the header, fonts used were Playfair and Cookie
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+  - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+- [GitHub](https://github.com/)
+  - Used to store code for the project after being pushed.
+- [Git](https://git-scm.com/)
+  - Used for version control by utilising the Gitpod terminal to commit to Git and Push to GitHub.
+- [Gitpod](https://www.gitpod.io/)
+  - Used as the development environment.
+- [Balsamiq](https://balsamiq.com/)
+  - Used to create the wireframes for the project.
+- [AutoPrefixer](https://autoprefixer.github.io/)
+  - Used to parse my CSS and ass vendor prefixes.
+- [Grammarly](https://www.grammarly.com/)
+  - Used to fix the thousands of grammar errors across the project.
+- [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB)
+  - Used to detect overflow of elements, which allowed me to quickly debug any issues.
+- [Coloors](https://coolors.co/)
+  - Used to create a colour palette for the design.
+- [Fancybox](https://fancyapps.com/fancybox/3/)
+  - Used to format my Sri Lanka photo gallery.
+- [Favicon.io](https://favicon.io/)
+  - Used to create favicon's for my website
+- [Tiny.png](https://tinypng.com/)
+  - Allowed me to compress my images so that the page would load faster.
+- [Color Contrast Accessibility Validator](https://color.a11y.com/)
+  - Allowed me to test the colour contrast of my webpage.
+- [W3C Markup Validation Service](https://validator.w3.org/)
+  - Used to validate all HTML code written and used in this webpage.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
+  - Used to validate all CSS code written and used in this webpage.
+- [Freeformatter CSS Beautify](https://www.freeformatter.com/css-beautifier.html)
+  - Used to accurately format my CSS code.
+- [Freeformatter HTML Formatter](https://www.freeformatter.com/html-formatter.html)
+  - Used to accurately format my HTML code.
+- [AmIResponsive](http://ami.responsivedesign.is/)
+  - Used to generate repsonsive image used in README file.
+- [Flaticon](https://www.flaticon.com/search?word=anaconda&k=1701933749453&sign-up=email)
+  - Used for my images used in the came.
