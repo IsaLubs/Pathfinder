@@ -53,5 +53,6 @@ Winning the Game: Upon successfully navigating your avatar to the hole before th
 
 ## Performance Assessment with Lighthouse
 Lighthouse, a feature of Google Chrome Developer Tools, is used to assess the performance of the website and its features. Initially, Pathfinder achieved a high-performance score, indicating that the game loads quickly, runs smoothly, and provides an excellent user experience. This assessment reflects the efficiency of the game's design and implementation, ensuring that players enjoy a seamless and responsive gaming experience.
-![thumbnail (1)](https://github.com/user-attachments/assets/9265faf6-6325-43eb-add5-5f97c40aedac)
+![Screenshot 2024-07-15 134008](https://github.com/user-attachments/assets/545dde99-0bfe-49ef-99cb-37fe7d3bed75)
+
 
